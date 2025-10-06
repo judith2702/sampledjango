@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<html>
+    <head>
+      <title>Django-users</title>
+      <link rel="stylesheet" href=" {% static "css/mystyle.css"%}">
+    </head>
+    <body>
+        <h1>Hello im printing out django picture</h1>
+        
+        <thead>
+        {% for user in users_list %}
+              <li>{{ user.first_name }} {{ user.last_name }} - {{ user.email }}</li>
+        {% endfor %}
+        </thead>
+        
+    </body>
+</html>
+
+        
